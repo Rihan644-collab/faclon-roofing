@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Falcon Roofing & Restoration — roofing inspections, repairs, and replacements in Austin, Texas.">
+<title>Falcon Roofing & Restoration | Austin, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#102b46;--blue:#1769aa;--sky:#eaf5fc;--green:#42a66c;--ink:#1b2c3b;--muted:#637486;--white:#fff;--line:#dce6ee;--shadow:0 18px 50px rgba(16,43,70,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--navy);color:#eaf5fc;font-size:13px;padding:9px 0}
+.topbar .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.topbar span{opacity:.94}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,230,238,.8)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:11px;font-family:Manrope,sans-serif;font-weight:800;color:var(--navy);line-height:1.1}
+.logo{width:46px;height:46px;background:var(--blue);border-radius:14px;display:grid;place-items:center;color:white;font-size:23px;box-shadow:0 8px 18px #1769aa35}
+.brand small{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700;color:#43576a}
+.navlinks a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:9px;padding:14px 20px;font-weight:700;transition:.25s;cursor:pointer}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 10px 22px #1769aa2e}
+.btn-primary:hover{background:#0e568f;transform:translateY(-2px)}
+.btn-light{background:white;color:var(--navy);border:1px solid var(--line)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.menu-toggle{display:none;background:none;border:0;font-size:28px;color:var(--navy)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(110deg,#f2f8fc 0%,#e6f3fb 54%,#d6eafa 100%);padding:82px 0 78px}
+.hero:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:#fff8;right:-120px;top:-180px}
+.hero-grid{display:grid;grid-template-columns:1fr .95fr;align-items:center;gap:55px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-size:12px;letter-spacing:1.8px;text-transform:uppercase;font-weight:800;margin-bottom:18px}
+.eyebrow:before{content:"";height:2px;width:28px;background:var(--green)}
+h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.13;letter-spacing:-.8px}
+h1{font-size:clamp(38px,5vw,62px);color:var(--navy);max-width:650px}
+h1 em{font-style:normal;color:var(--blue)}
+.hero-copy{font-size:17px;color:#53697c;max-width:530px;margin:22px 0 28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust-row{display:flex;align-items:center;gap:14px;margin-top:32px;color:#53697c;font-size:13px}
+.avatars{display:flex}
+.avatars span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#d2e8f6;border:2px solid white;margin-left:-7px;font-size:12px}
+.avatars span:first-child{margin-left:0;background:#b5dfc6}.avatars span:nth-child(2){background:#f3d6b7}.avatars span:nth-child(3){background:#c8d5f0}
+.hero-visual{position:relative;min-height:420px}
+.roof-photo{position:absolute;inset:0 0 25px 18px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.roof-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-overlay{position:absolute;inset:0;background:linear-gradient(0deg,#102b4670,transparent 55%)}
+.photo-label{position:absolute;bottom:22px;left:23px;color:white;font-weight:700}
+.photo-label small{display:block;font-weight:500;opacity:.85;font-size:12px}
+.float-card{position:absolute;left:-18px;bottom:0;background:white;border-radius:15px;padding:18px 21px;box-shadow:var(--shadow);display:flex;align-items:center;gap:13px;animation:float 4s ease-in-out infinite}
+.float-icon{width:44px;height:44px;background:#e1f5e8;color:#22834a;border-radius:12px;display:grid;place-items:center;font-size:23px}
+.float-card strong{display:block;color:var(--navy);font-size:16px}.float-card small{color:var(--muted);font-size:12px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.stats{position:relative;margin-top:-1px;background:var(--navy);color:white;padding:24px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stat{padding:5px 22px;border-right:1px solid #ffffff24}.stat:first-child{padding-left:0}.stat:last-child{border:0}
+.stat strong{display:block;font-family:Manrope,sans-serif;font-size:26px}.stat span{font-size:12px;color:#c6d6e3}
+section{padding:88px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 43px}
+.section-head .eyebrow{justify-content:center}
+h2{font-size:clamp(30px,4vw,43px);color:var(--navy)}
+.section-head p{color:var(--muted);margin-top:15px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service-card{padding:29px;border:1px solid var(--line);border-radius:16px;background:white;transition:.3s}
+.service-card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#b6d9ef}
+.service-icon{height:53px;width:53px;border-radius:14px;background:var(--sky);display:grid;place-items:center;font-size:25px;margin-bottom:22px}
+.service-card h3{font-size:20px;color:var(--navy);margin-bottom:11px}
+.service-card p{font-size:14px;color:var(--muted);margin-bottom:19px}
+.learn{font-weight:800;color:var(--blue);font-size:13px}
+.why{background:#f5f9fc}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-image{height:430px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+.why-image img{width:100%;height:100%;object-fit:cover}
+.check-list{list-style:none;margin:25px 0 30px;display:grid;gap:17px}
+.check-list li{display:flex;gap:12px;color:#52677a}
+.check{flex:0 0 25px;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#dff4e7;color:#23834b;font-weight:800}
+.why-copy>p{margin-top:17px;color:var(--muted)}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.process{padding:28px;border-radius:14px;background:#f5f9fc}
+.step{font-family:Manrope,sans-serif;color:#9bc7e4;font-weight:800;font-size:36px;margin-bottom:13px}
+.process h3{color:var(--navy);font-size:19px;margin-bottom:10px}.process p{font-size:14px;color:var(--muted)}
+.cta{padding:0 0 88px}
+.cta-box{border-radius:22px;padding:49px 52px;background:linear-gradient(110deg,var(--blue),var(--navy));color:white;display:flex;align-items:center;justify-content:space-between;gap:25px;overflow:hidden;position:relative}
+.cta-box:after{content:"";position:absolute;width:300px;height:300px;border:45px solid #ffffff0c;border-radius:50%;right:18%;top:-170px}
+.cta-box h2{color:white;max-width:600px}.cta-box p{color:#d6e7f4;margin-top:12px}.cta-box .btn{background:white;color:var(--navy);white-space:nowrap;position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px}
+.contact-copy p{color:var(--muted);margin:16px 0 24px}
+.contact-detail{display:flex;gap:12px;margin:18px 0;color:#4f6375}.contact-detail b{color:var(--navy);display:block}
+form{padding:30px;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px #102b460a}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:12px;font-weight:800;color:#52677a;margin-bottom:7px}
+input,select,textarea{width:100%;border:1px solid #d6e1e9;border-radius:8px;padding:12px 13px;margin-bottom:17px;outline:none;background:#fbfdff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #1769aa14}
+textarea{resize:vertical;min-height:100px}
+footer{background:#0c2238;color:#c6d6e3;padding:35px 0}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer .brand{color:white}footer .brand small{color:#a9bdcc}footer p{font-size:12px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.notice{font-size:11px;color:#8796a3;margin-top:12px}
+@media(max-width:900px){.hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:60px}.hero-visual{min-height:370px}.roof-photo{inset:0 0 20px 10px}.why-image{height:350px}.navlinks{gap:15px}.services-grid{grid-template-columns:repeat(2,1fr)}.cta-box{padding:38px;align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){.topbar .container{justify-content:center;text-align:center}.nav{height:70px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:white;padding:22px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks .btn{width:100%}.nav>.btn{display:none}.hero{padding:47px 0 55px}.hero-grid{gap:35px}.hero-copy{font-size:15px}.hero-visual{min-height:290px}.float-card{left:0;padding:13px}.stats-grid{grid-template-columns:repeat(2,1fr);gap:15px}.stat{padding:7px 12px;border-right:0}.stat:first-child{padding-left:12px}.stat strong{font-size:23px}section{padding:65px 0}.services-grid,.process-grid{grid-template-columns:1fr}.why-grid{gap:30px}.why-image{height:270px}.cta{padding-bottom:65px}.cta-box{padding:30px 25px}.form-row{grid-template-columns:1fr;gap:0}form{padding:22px}.footer-row{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>📍 Proudly serving Austin, Texas & surrounding areas</span><span>Mon–Sat: 7:00 AM – 6:00 PM &nbsp; | &nbsp; Free roof inspections</span></div></div>
+<header><div class="container nav">
+  <a class="brand" href="#home"><span class="logo">⌂</span><span>FALCON ROOFING<small>& RESTORATION</small></span></a>
+  <button class="menu-toggle" aria-label="Open menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+  <nav class="navlinks"><a href="#services">Services</a><a href="#about">Why Falcon</a><a href="#process">Our Process</a><a href="#contact">Contact</a></nav>
+  <a class="btn btn-primary" href="#contact">Get a Free Estimate ↗</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+  <div class="reveal"><div class="eyebrow">Austin's trusted roofing team</div><h1>A stronger roof.<br><em>A safer home.</em></h1><p class="hero-copy">Reliable roof repairs, replacements, and storm-damage support—backed by clear communication and craftsmanship you can count on.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#contact">Request a Free Inspection ↗</a><a class="btn btn-light" href="#services">Explore Services</a></div>
+    <div class="trust-row"><div class="avatars"><span>✓</span><span>⌂</span><span>★</span></div><span><strong>Quality-first service</strong><br>Local care. Straight answers.</span></div>
+  </div>
+  <div class="hero-visual reveal"><div class="roof-photo"><img src="https://images.unsplash.com/photo-1635424710928-6e8b7f6b2a6f?auto=format&fit=crop&w=1200&q=85" alt="Modern home with a professionally maintained roof" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85'"><div class="photo-overlay"></div><div class="photo-label">Protection from the top down<small>Roofing solutions built around your home</small></div></div><div class="float-card"><div class="float-icon">✓</div><div><strong>Free roof inspection</strong><small>No-pressure estimate</small></div></div></div>
+</div></section>
+<div class="stats"><div class="container stats-grid"><div class="stat"><strong>Local</strong><span>Austin-area service</span></div><div class="stat"><strong>Clear</strong><span>Upfront communication</span></div><div class="stat"><strong>Quality</strong><span>Detail-focused work</span></div><div class="stat"><strong>Care</strong><span>Respect for your property</span></div></div></div>
+<section id="services"><div class="container"><div class="section-head reveal"><div class="eyebrow">What we do</div><h2>Roofing solutions for<br>every stage of your roof.</h2><p>From a small leak to a full roof replacement, get practical guidance and service designed around your property.</p></div>
+<div class="services-grid">
+  <article class="service-card reveal"><div class="service-icon">🏠</div><h3>Roof Replacement</h3><p>Upgrade an aging roof with a carefully planned replacement and materials suited to your property.</p><a class="learn" href="#contact">Discuss your project ↗</a></article>
+  <article class="service-card reveal"><div class="service-icon">🛠️</div><h3>Roof Repairs</h3><p>Address leaks, damaged shingles, flashing concerns, and other issues before they get worse.</p><a class="learn" href="#contact">Request a repair ↗</a></article>
+  <article class="service-card reveal"><div class="service-icon">⛈️</div><h3>Storm Damage</h3><p>Get help assessing visible storm damage and understanding sensible next steps for your roof.</p><a class="learn" href="#contact">Book an inspection ↗</a></article>
+  <article class="service-card reveal"><div class="service-icon">🔎</div><h3>Roof Inspections</h3><p>A closer look at your roof's condition, with findings explained in straightforward language.</p><a class="learn" href="#contact">Schedule an inspection ↗</a></article>
+  <article class="service-card reveal"><div class="service-icon">🏡</div><h3>Residential Roofing</h3><p>Roofing support for homeowners, with attention to curb appeal, durability, and proper installation.</p><a class="learn" href="#contact">Explore options ↗</a></article>
+  <article class="service-card reveal"><div class="service-icon">📋</div><h3>Project Guidance</h3><p>Understand the scope, timeline, and estimate before deciding how to move forward.</p><a class="learn" href="#contact">Talk with our team ↗</a></article>
+</div></div></section>
+<section class="why" id="about"><div class="container why-grid"><div class="why-image reveal"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1100&q=85" alt="Well-maintained contemporary home" loading="lazy"></div><div class="why-copy reveal"><div class="eyebrow">The Falcon difference</div><h2>Good work starts with a clear plan.</h2><p>Your roof is a major part of your home's protection. We believe choosing roofing help should feel clear—not confusing or pressured.</p><ul class="check-list"><li><span class="check">✓</span><span><strong>Easy-to-understand estimates</strong><br>Know what is being recommended and why.</span></li><li><span class="check">✓</span><span><strong>Respect for your property</strong><br>Thoughtful planning and a tidy work area.</span></li><li><span class="check">✓</span><span><strong>Communication at every step</strong><br>Know what comes next and who to contact.</span></li></ul><a class="btn btn-primary" href="#contact">Talk About Your Roof ↗</a></div></div></section>
+<section id="process"><div class="container"><div class="section-head reveal"><div class="eyebrow">Simple from start to finish</div><h2>Three steps to peace of mind.</h2><p>A straightforward process helps you make an informed decision about your property.</p></div><div class="process-grid"><article class="process reveal"><div class="step">01</div><h3>Tell us what you need</h3><p>Share the issue you're seeing or the type of roofing project you're planning.</p></article><article class="process reveal"><div class="step">02</div><h3>Get an inspection</h3><p>Discuss the roof's condition and review the recommended options and estimate.</p></article><article class="process reveal"><div class="step">03</div><h3>Plan the work</h3><p>Choose the next step with a clear understanding of the proposed scope and timeline.</p></article></div></div></section>
+<div class="cta"><div class="container"><div class="cta-box reveal"><div><h2>Your roof deserves a little attention.</h2><p>Start with a conversation and a no-pressure estimate for your roofing project.</p></div><a class="btn" href="#contact">Get Your Free Estimate ↗</a></div></div></div>
+<section id="contact"><div class="container contact-grid"><div class="contact-copy reveal"><div class="eyebrow">Let's talk roofing</div><h2>Have a roofing question?</h2><p>Tell us a little about your property and what you need. Our team can help you understand the next step.</p><div class="contact-detail"><span>📞</span><span><b>Call our team</b>(512) 200-1539 <small>(Demo contact—confirm before publishing)</small></span></div><div class="contact-detail"><span>📍</span><span><b>Service area</b>Austin, Texas and nearby communities</span></div><div class="contact-detail"><span>✉️</span><span><b>Email</b>info@falconroofingtexas.com <small>(Demo contact—confirm before publishing)</small></span></div></div>
+<form class="reveal" id="estimateForm"><h3 style="font-size:22px;color:var(--navy);margin-bottom:7px">Request an Estimate</h3><p style="font-size:13px;color:var(--muted);margin-bottom:22px">Fill out the form and we'll be in touch.</p><div class="form-row"><div><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required></div><div><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="(555) 000-0000" required></div></div><div class="form-row"><div><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div><div><label for="service">Service needed</label><select id="service" name="service" required><option value="">Choose a service</option><option>Roof repair</option><option>Roof replacement</option><option>Storm damage</option><option>Roof inspection</option><option>Other</option></select></div></div><label for="message">How can we help?</label><textarea id="message" name="message" placeholder="Tell us a little about your roof..."></textarea><button class="btn btn-primary" type="submit" style="width:100%">Submit Estimate Request ↗</button><p class="notice">Demo form only: submissions are not sent or stored. Connect a form service before launch.</p><p id="formMessage" role="status" style="display:none;margin-top:12px;color:var(--green);font-weight:700"></p></form></div></section>
+</main>
+<footer><div class="container footer-row"><a class="brand" href="#home"><span class="logo">⌂</span><span>FALCON ROOFING<small>& RESTORATION</small></span></a><p>© <span id="year"></span> Falcon Roofing & Restoration. Demo concept created by Rihan Web Studio.</p><p>Design preview only • Verify business details before publishing.</p></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('estimateForm').addEventListener('submit',e=>{e.preventDefault();const m=document.getElementById('formMessage');m.style.display='block';m.textContent='Thanks! This is a demo form and no information has been sent.';});
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
